@@ -1,0 +1,13 @@
+if two files are in the same folder and have the same
+ package name, they belong to the same package.
+Example:
+main.go and maths.go both use package main
+So they can share functions and variables
+
+Important rule: same package, no duplicate main()
+Only one main() function is allowed in the whole executable program.
+If you have two files with package main and both define main(), Go will complain.
+
+Package names are usually lowercase.
+Package names should be short and meaningful.
+Example: main  fmt math
