@@ -1,26 +1,26 @@
 package main
+import ("fmt")
 
-import (
-	"fmt"
-)
 
-func runMaths() {
-	fmt.Println("starting math")
+func runAdd(a ,b int) int {
+	
+	fmt.Println("Adding ...")
+	return a + b
 
-	// var k int  = 5
-	// var p int32 = 6
-	// fmt.Println(k + p) :unmathced types cant have a common operand
+}
 
-	var nm string = "Ss"
-	kk := 4
-	fmt.Print(nm)
-	fmt.Println(kk)
-	//nm + kk dont work
-	str := "check"
-	fmt.Println(str + nm)
-
+func runMul(a , b int)  int{
+	
+	fmt.Println("Multiplying...")
+	return b * a
 }
 
 func runMod(a, b int) int {
+	
+	fmt.Println("Modding up ...")
 	return a % b
 }
+
+
+
+

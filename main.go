@@ -11,6 +11,19 @@ func main() {
 	
 	fmt.Println("Enter Creator hash : " ,name)
 	fmt.Scanln(&name)
+	
+	var a int = 0
+	var b int = 0
+
+	fmt.Println("Enter first number :")
+	fmt.Scanln(&a)
+	fmt.Println("Enter Second number : ")
+	fmt.Scanln(&b)
+	
+	fmt.Println(runAdd(a , b))
+	fmt.Println(runMod(a ,b))
+	fmt.Println(runMul(a , b))
+	
 	for i := 0; i < 3; i++ {
 		taskcreate()
 	}
