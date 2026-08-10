@@ -1,37 +1,46 @@
 package main
-import "fmt"
 
-func taskcreate(){
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
-	name := ""
-	task := []string {}
+func taskcreate() {
+	task := []string{}
 	cnfrm := "y"
 
-	fmt.Println("Enter your Name :")
-	fmt.Scan(&name)
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Println("Enter your Name:")
+	scanner.Scan()
+	name := scanner.Text()
+
+	fmt.Println("Hello", name)
 
 	for cnfrm == "y" {
-		fmt.Println("WAnt to Enter new task (y/n)")
-		fmt.Scanln(&cnfrm)
+		fmt.Println("Want to enter a new task? (y/n)")
+		scanner.Scan()
+		cnfrm = scanner.Text()
+
 		if cnfrm == "n" {
 			break
 		}
 
-		fmt.Println("Enter new task ")
-		newtask := ""
-		fmt.Scanln(&newtask)
+		fmt.Println("Enter new task:")
+		scanner.Scan()
+		newtask := scanner.Text()
+
 		task = append(task, newtask)
-		fmt.Printf("New task  : %s\n", newtask)
+
+		fmt.Printf("New task: %s\n", newtask)
 	}
 
 	fmt.Println("===================")
 	fmt.Println("TASK CREATED")
-	fmt.Println("======	LIST==============")
+	fmt.Println("======= LIST =======")
 
-	for query,tasks := range(task){
-		fmt.Println(query , tasks)
+	for query, tasks := range task {
+		fmt.Println(query, tasks)
 	}
 }
-
-
-
