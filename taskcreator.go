@@ -1,31 +1,37 @@
 package main
-
-import ("fmt")
-
+import "fmt"
 
 func taskcreate(){
-	
-    var priority int = 1
+
 	name := ""
-	task := ""
-	age := 0
-	
+	task := []string {}
+	cnfrm := "y"
+
 	fmt.Println("Enter your Name :")
 	fmt.Scan(&name)
 
-	fmt.Println("Enter your Task :")
-	fmt.Scan(&task)
+	for cnfrm == "y" {
+		fmt.Println("WAnt to Enter new task (y/n)")
+		fmt.Scanln(&cnfrm)
+		if cnfrm == "n" {
+			break
+		}
 
-	fmt.Println("Enter your Age :")
-	fmt.Scan(&age)
+		fmt.Println("Enter new task ")
+		newtask := ""
+		fmt.Scanln(&newtask)
+		task = append(task, newtask)
+		fmt.Printf("New task  : %s\n", newtask)
+	}
 
 	fmt.Println("===================")
 	fmt.Println("TASK CREATED")
-	fmt.Println("====================")
-	fmt.Printf("Task : %s  allocated by Author %s of age %d years",task,name,age)
-	fmt.Printf("Priority : %d",priority)
-	priority = priority + 1 
+	fmt.Println("======	LIST==============")
 
+	for query,tasks := range(task){
+		fmt.Println(query , tasks)
+	}
 }
+
 
 

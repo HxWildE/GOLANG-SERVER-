@@ -24,9 +24,8 @@ func main() {
 	fmt.Println(runMod(a ,b))
 	fmt.Println(runMul(a , b))
 	
-	for i := 0; i < 3; i++ {
-		taskcreate()
-	}
+	taskcreate()
+	
 	// fmt.Println(runMod(a,b))
 
 	//runnig maths go lib func
