@@ -44,3 +44,5 @@ func taskcreate() {
 		fmt.Println(query, tasks)
 	}
 }
+
+func task2(){}
