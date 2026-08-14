@@ -1,5 +1,8 @@
 package main
-import "fmt"
+import (
+	"fmt"
+	)
+
 
 //format package
 func main() {
@@ -8,10 +11,15 @@ func main() {
 	
 	// var a ,b int
 	var name string
-	
+
+	 var tasks tasklist
+	 tasks = writetask(tasks)
+     readtask(tasks)
+
 	fmt.Println("Enter Creator hash : " ,name)
 	fmt.Scanln(&name)
-	
+	fmt.Println("Enter Creator hash : " ,name)	
+
 	var a int = 0
 	var b int = 0
 
@@ -25,6 +33,8 @@ func main() {
 	fmt.Println(runMul(a , b))
 	
 	taskcreate()
+
+
 	
 	// fmt.Println(runMod(a,b))
 
